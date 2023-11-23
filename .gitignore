@@ -1,0 +1,9 @@
+# Ignore .metafile files
+*.metafile
+
+# Ignore Java class files
+*.class
+
+# Ignore .DS_Store (macOS folder metadata)
+.DS_Store
+
