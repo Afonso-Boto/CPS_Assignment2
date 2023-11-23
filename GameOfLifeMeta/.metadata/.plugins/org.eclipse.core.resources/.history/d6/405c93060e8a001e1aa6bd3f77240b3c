@@ -1,0 +1,76 @@
+package gol.generator;
+
+import gol.gol.GameOfLife;
+import org.eclipse.xtend2.lib.StringConcatenation;
+
+@SuppressWarnings("all")
+public class RuleGenerator {
+  public static CharSequence genCode(final GameOfLife root) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method getRules(Rules) from the type RuleGenerator refers to the missing type Rules");
+  }
+
+  public static CharSequence staticCode() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("package GameOfLife;");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("import java.awt.Point;");
+    _builder.newLine();
+    _builder.append("import java.util.ArrayList;");
+    _builder.newLine();
+    _builder.append("public class RulesOfLife {");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("public static void computeSurvivors(boolean[][] gameBoard, ArrayList<Point> survivingCells) {");
+    _builder.newLine();
+    _builder.append("       \t ");
+    _builder.append("for (int i=1; i<gameBoard.length-1; i++) {");
+    _builder.newLine();
+    _builder.append("            ");
+    _builder.append("for (int j=1; j<gameBoard[0].length-1; j++) {");
+    _builder.newLine();
+    _builder.append("                ");
+    _builder.append("int surrounding = 0;");
+    _builder.newLine();
+    _builder.append("                ");
+    _builder.append("if (gameBoard[i-1][j-1]) { surrounding++; }");
+    _builder.newLine();
+    _builder.append("                ");
+    _builder.append("if (gameBoard[i-1][j])   { surrounding++; }");
+    _builder.newLine();
+    _builder.append("                ");
+    _builder.append("if (gameBoard[i-1][j+1]) { surrounding++; }");
+    _builder.newLine();
+    _builder.append("                ");
+    _builder.append("if (gameBoard[i][j-1])   { surrounding++; }");
+    _builder.newLine();
+    _builder.append("                ");
+    _builder.append("if (gameBoard[i][j+1])   { surrounding++; }");
+    _builder.newLine();
+    _builder.append("                ");
+    _builder.append("if (gameBoard[i+1][j-1]) { surrounding++; }");
+    _builder.newLine();
+    _builder.append("                ");
+    _builder.append("if (gameBoard[i+1][j])   { surrounding++; }");
+    _builder.newLine();
+    _builder.append("                ");
+    _builder.append("if (gameBoard[i+1][j+1]) { surrounding++; }");
+    _builder.newLine();
+    _builder.append("                ");
+    _builder.newLine();
+    _builder.append("                ");
+    _builder.newLine();
+    return _builder;
+  }
+
+  public static CharSequence getRules(final /* Rules */Object r) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("\t\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    return _builder;
+  }
+}

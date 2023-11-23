@@ -1,0 +1,13 @@
+Configuration {
+    InitialGrid
+        Alive: {
+            (2,2) (3,2) (4,2) (7,2) (6,7) (5, 3)
+        }
+    
+    EvaluationRules 
+        Survive == 2
+        Survive == 2 
+        Reborn < 3
+        Reborn > 4
+    
+}

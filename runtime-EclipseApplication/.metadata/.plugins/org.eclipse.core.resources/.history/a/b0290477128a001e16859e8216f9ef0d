@@ -1,0 +1,22 @@
+package GameOfLife;
+
+import java.awt.Point;
+import java.util.ArrayList;
+
+public class InitialGrid {
+	public static ArrayList<Point> initGameBoard() {
+    	ArrayList<Point> points = new ArrayList<>();
+    	points.add(new Point(1,2));
+    	points.add(new Point(4,2));
+    	points.add(new Point(2,1));
+    	points.add(new Point(4,3));
+    	points.add(new Point(5,5));
+    	points.add(new Point(2,2));
+    	points.add(new Point(3,2));
+    	points.add(new Point(5,1));
+    	points.add(new Point(6,3));
+    	points.add(new Point(8,5));
+    	return points;
+    }
+
+}

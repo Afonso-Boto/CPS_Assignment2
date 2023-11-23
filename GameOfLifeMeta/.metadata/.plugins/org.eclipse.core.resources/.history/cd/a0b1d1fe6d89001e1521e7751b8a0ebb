@@ -1,0 +1,9 @@
+grammar gol.Gol with org.eclipse.xtext.common.Terminals
+
+generate gol "http://www.Gol.gol"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

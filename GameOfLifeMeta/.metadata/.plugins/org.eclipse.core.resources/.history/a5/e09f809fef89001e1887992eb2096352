@@ -1,0 +1,34 @@
+grammar gol.Gol with org.eclipse.xtext.common.Terminals
+
+generate gol "http://www.Gol.gol"
+
+GameOfLife:
+    configuration += Configuration+
+;
+
+Configuration:
+    'Configuration' '{'
+        'InitialGrid' initialGrid = Grid
+        'EvaluationRules' rules += Rule+
+    '}'
+;
+
+
+Rule:
+	'Survive' survive += Condition+ |
+    'Reborn' reborn += Condition+
+;
+
+Grid:
+    'Alive:' '{' alive += Coordinate+ '}'
+;
+
+Coordinate:
+    '(' x=INT ',' y=INT ')'
+;
+
+Condition:
+    '<' value=INT |
+    '=' value=INT |
+    '>' value=INT
+;

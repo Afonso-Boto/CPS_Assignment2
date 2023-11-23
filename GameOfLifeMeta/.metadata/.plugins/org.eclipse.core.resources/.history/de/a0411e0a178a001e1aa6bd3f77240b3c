@@ -1,0 +1,24 @@
+package gol.generator
+
+import gol.gol.GameOfLife
+import gol.gol.Configuration
+
+class BoardGenerator {
+	def static baseCode(GameOfLife root)'''
+		package GameOfLife;
+		
+		import java.awt.Point;
+		import java.util.ArrayList;
+		
+		public class InitialGrid {
+			public static ArrayList<Point> initGameBoard() {
+		    	ArrayList<Point> points = new ArrayList<>();
+				«FOR conf : root.configuration»
+					«addingPoints(conf)»
+				«ENDFOR»
+	'''
+	
+	def static addingPoints(Configuration conf)'''
+	«Auxiliary.getCoords(conf.initialGrid)»
+	'''
+}
